@@ -1,11 +1,15 @@
-package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents;
+package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents.onBeans;
 
-@org.springframework.stereotype.Service
-class FirstConditionalOnBeanService implements ConditionalOnBeanService{
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.stereotype.Service;
 
-  @Override
+@Service
+@ConditionalOnBean(ConditionBean.class)
+public class FirstConditionalOnBeanService implements ConditionalOnBeanService {
+
+    @Override
     public String getId() {
-        return "ConditionalOnBeanService_1";
+        return "ConditionalOnBeanService 1: ConditionBean is present";
     }
 }
 

@@ -1,9 +1,14 @@
 package com.mytests.spring.springconditionalbeansautowiring.conditionalConfigurations;
 
-/**
- **
- * <p>Created by Irina on 6/29/2025.</p>
- **
- */
+
 public class Bean1 {
+    public String getS() {
+        return s;
+    }
+
+    private final String s;
+
+    public Bean1(String s) {
+        this.s = s;
+    }
 }

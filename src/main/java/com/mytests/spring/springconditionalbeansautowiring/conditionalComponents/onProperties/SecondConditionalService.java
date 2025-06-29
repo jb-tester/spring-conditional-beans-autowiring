@@ -1,4 +1,4 @@
-package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents;
+package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents.onProperties;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;

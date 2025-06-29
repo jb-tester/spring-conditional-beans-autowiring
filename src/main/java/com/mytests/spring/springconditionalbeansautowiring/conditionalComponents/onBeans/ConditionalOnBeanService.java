@@ -1,4 +1,4 @@
-package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents;
+package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents.onBeans;
 
 
 public interface ConditionalOnBeanService {

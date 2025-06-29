@@ -1,10 +1,15 @@
-package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents;
+package com.mytests.spring.springconditionalbeansautowiring.conditionalComponents.onBeans;
 
-@org.springframework.stereotype.Service
-class SecondConditionalOnBeanService implements ConditionalOnBeanService{
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.stereotype.Service;
 
-  @Override
+@Service
+@ConditionalOnMissingBean(ConditionBean.class)
+public class SecondConditionalOnBeanService implements ConditionalOnBeanService {
+
+    @Override
     public String getId() {
-        return "ConditionalOnBeanService_2";
+        return "ConditionalOnBeanService 2: ConditionBean is missing";
     }
 }

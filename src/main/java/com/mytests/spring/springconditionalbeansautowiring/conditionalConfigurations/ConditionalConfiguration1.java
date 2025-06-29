@@ -1,13 +1,15 @@
-package com.mytests.spring.springconditionalbeansautowiring;
+package com.mytests.spring.springconditionalbeansautowiring.conditionalConfigurations;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- **
- * <p>Created by Irina on 6/29/2025.</p>
- **
- */
-@Configuration
-class ConditionalConfiguration1 {
 
+@Configuration
+@ConditionalOnProperty(prefix = "custom.config", name = "flag0", havingValue = "true")
+class ConditionalConfiguration1 {
+    @Bean
+    public Bean1 bean1() {
+        return new Bean1("conditional configuration 1: flag0 = true");
+    }
 }

@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ConditionalOnProperty(prefix = "custom.config", name = "prop1", havingValue = "day")
-class ConditionalConfiguration1 {
+@ConditionalOnProperty(prefix = "custom.config", name = "flag0", havingValue = "false")
+class ConditionalConfiguration2 {
     @Bean
     public Bean1 bean1() {
-        return new Bean1();
+        return new Bean1("conditional configuration 1: flag0 = false");
     }
 }
