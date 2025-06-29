@@ -1,0 +1,15 @@
+package com.mytests.spring.springconditionalbeansautowiring.conditionalConfigurations;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+@ConditionalOnProperty(prefix = "custom.config", name = "prop1", havingValue = "day")
+class ConditionalConfiguration1 {
+    @Bean
+    public Bean1 bean1() {
+        return new Bean1();
+    }
+}
